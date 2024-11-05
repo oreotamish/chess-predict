@@ -125,8 +125,8 @@ io.on('connection', (socket) => {
         console.log("Best move:", bestMove);
 
         socket.emit('processedData', {
-          // bestmove: bestMove?.bestmove || null,
-          bestmove: bestMove?.ponder || null
+          bestmove: bestMove?.bestmove || null,
+          ponder: bestMove?.ponder || null
         });
         
       } catch (error) {

@@ -5,7 +5,7 @@ const socket = io("http://localhost:8080");
 socket.on("connect", () => {
   console.log("Connected to server");
   setTimeout(() => {
-    socket.emit("processUrl", { url: "wss://socket2.lichess.org/play/xJmefDU8bdWG/v6?sri=hoZbFS9hadoM&v=0" });
+    socket.emit("processUrl", { url: "wss://socket3.lichess.org/play/NBQc5D25qmv3/v6?sri=hmj1bCoB5cih&v=0" });
   }, 2000);
 });
 
