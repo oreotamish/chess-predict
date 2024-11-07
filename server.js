@@ -107,7 +107,13 @@ io.on('connection', (socket) => {
 
   socket.on("processUrl", async ({url}) => {
     console.log('Processing URL:', url);
-    const externalSocket = new WebSocket(url);
+    const externalSocket = new WebSocket(url, [], {
+      headers: {
+        'Host': "socket4.lichess.org",
+        'Origin': "https://lichess.org",
+      }
+    });
+    
     let blackLocal, whiteLocal;
 
     externalSocket.on('message', async (msg) => {
